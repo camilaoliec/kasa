@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    max-width: 1240px;
+    margin: 30px auto;
+    img {
+        width: 210px;
+        height: 68px;
+    }
+    .menu {
+        display: flex;
+        gap: 57px;
+        a {
+            font-family: $font-primary;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+}
