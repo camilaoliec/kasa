@@ -1,10 +1,13 @@
-import React from 'react'
-import './Banner.scss'
+import React from 'react';
+import './Banner.scss';
 
-function Banner({ title }) {
+const Banner = ({ backgroundImage, title }) => {
   return (
-    <div className="banner">
-      <h1>{title}</h1>
+    <div 
+      className="banner"
+      style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})` }}
+    >
+      {title && <h1>{title}</h1>}
     </div>
   )
 }
