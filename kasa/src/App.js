@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import Home from './pages/Home'
-import About from '.pages/About'
+import APropos from './pages/APropos'
 import Error from './components/Error'
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/APropos" element={<APropos />} />
+          <Route path="Layout" element={<Layout />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Layout>
