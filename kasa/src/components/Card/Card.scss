@@ -2,14 +2,18 @@
 
 .card-box {
     max-width: 1240px;
+    height: 829px;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(150px, 340px));
-    gap: 30px;
+    gap: 50px;
     justify-items: center;
     background-color: #F6F6F6;
     border-radius: 25px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 50px 0;
+    overflow-y: auto;
+    scrollbar-width: none;
     .card {
 
         width: 340px;

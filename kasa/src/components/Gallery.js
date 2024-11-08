@@ -6,7 +6,7 @@ export default function Gallery() {
 
   const fetchData = async () => {
     try {
-      const response =await fetch("/data/logement.json");
+      const response = await fetch("/logements.json");
       if (!response.ok) throw new Error("Erreur lors du chargement des données");
       const result = await response.json();
       setData(result);
