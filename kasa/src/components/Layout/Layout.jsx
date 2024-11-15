@@ -3,11 +3,13 @@ import Footer from "../Footer/Footer";
 
 function Layout({ children }) {
     return (
-        <div>
+            <>
             <Header />
-            {children}
+            <main>
+                {children}
+            </main>
             <Footer />
-        </div>
+            </>
     );
 }
 

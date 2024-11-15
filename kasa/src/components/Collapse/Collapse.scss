@@ -1,0 +1,37 @@
+.collapses-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    .collapse {
+        width: 1023px;
+        .collapse-header {
+            display: flex;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 1023px;
+            padding: 10px 20px 10px 15px;
+            background-color: #FF6060;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        h2 {
+            margin: 0;
+        }
+        .arrow-icon {
+            width: 20px;
+            transition: transform 0.3s ease;
+        }
+        .open {
+            transform: rotate(-180deg);
+        }
+    }
+    .collapse-content {
+        padding: 15px;
+        display: none;
+        display: block;
+        background-color: #F6F6F673;
+    }
+}

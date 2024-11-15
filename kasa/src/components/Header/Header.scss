@@ -11,7 +11,7 @@ nav {
         width: 210px;
         height: 68px;
     }
-    .menu {
+    .nav-links {
         display: flex;
         gap: 57px;
         a {
@@ -20,6 +20,9 @@ nav {
             color: black;
             font-size: 24px;
             font-weight: 500;
+        }
+        .active {
+            text-decoration: underline;
         }
     }
 }

@@ -25,6 +25,7 @@ export default function Gallery() {
       {data.map((logement) => (
         <Card
           key={logement.id}
+          id={logement.id}
           title={logement.title}
           picture={logement.cover}
         />
