@@ -1,0 +1,174 @@
+@import '../../scss/variables';*
+
+main {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__image {
+        width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+    &__counter {
+        position: absolute;
+        top: 357px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+
+    }
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 10;
+
+        &--left {
+            left: 10px;
+        }
+        &--right {
+            right: 10px;
+        }
+    }
+}
+h1 {
+   font-family: $font-primary;
+   font-size: 36px;
+   font-weight: 500;
+   color: #FF6060;
+}
+p {
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.fiche-logement {
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin-top: 30px;
+        &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 20px;
+        }
+    }
+    &__tags {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    &__tag {
+        align-items: center;
+        background-color: #FF6060;
+        width: auto;
+        border-radius: 10px;
+        padding: 0 15px;
+        font-weight: 700;
+        p {
+            color: white;
+            font-family: $font-primary;
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+    &__host {
+        display: flex;
+        flex-direction: row;
+        p {
+            font-family: $font-primary;
+            font-size: 18px;
+            font-weight: 500;
+            color: #FF6060;
+        }
+        &-picture {
+            width: 64px;
+            height: 64px;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+    }   
+    &__rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    } 
+    .inactive {
+        margin: 0 4px;
+        width: 25px;
+        height: 26px;
+    }
+    .sections {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 76px;
+        .collapse {
+            width: 582px;
+            height: 52px;
+            &-header {
+                display: flex;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 20px 10px 15px;
+                background-color: #FF6060;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            &-content {
+                overflow: hidden;
+                padding: 15px;
+                display: none;
+                display: block;
+                background-color: #F6F6F673;
+                li {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+                p {
+                    margin: 0;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+            h2 {
+                margin: 0;
+                color: white;
+                font-family: $font-primary;
+                font-weight: 700;
+                font-size: 18px;
+            }
+            .arrow-icon {
+                width: 20px;
+                transition: transform 0.2s ease;
+            }
+            .open {
+                transform: rotate(-180deg);
+            }
+        }
+    } 
+}

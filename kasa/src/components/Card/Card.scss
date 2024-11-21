@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 
 .card-box {
-    max-width: 1240px;
+    width: 1240px;
     height: 829px;
     display: grid;
     justify-content: center;
@@ -15,14 +15,12 @@
     overflow-y: auto;
     scrollbar-width: none;
     .card {
-
         width: 340px;
         height: 340px;
         position: relative;
         overflow: hidden;
         object-fit: cover;
         img {        
-
             height: 340px;
         }
         border-radius: 10px;
