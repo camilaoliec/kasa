@@ -1,0 +1,244 @@
+* h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.fiche-logement {
+  display: flex;
+  flex-direction: column;
+}
+.fiche-logement__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin-top: 30px;
+}
+.fiche-logement__info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.fiche-logement__tags {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.fiche-logement__tag {
+  align-items: center;
+  background-color: #FF6060;
+  width: auto;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 0 15px;
+}
+.fiche-logement__tag p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  height: 25px;
+}
+.fiche-logement__host {
+  display: flex;
+  flex-direction: row;
+}
+.fiche-logement__host p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FF6060;
+}
+.fiche-logement__host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+.fiche-logement__rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.fiche-logement .inactive {
+  margin: 0 4px;
+  width: 25px;
+  height: 26px;
+}
+
+.sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.sections .collapse {
+  width: 47%;
+  max-width: 582px;
+  margin-bottom: 20px;
+}
+.sections .collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 15px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sections .collapse-content {
+  overflow: hidden;
+  padding: 15px;
+  display: none;
+  display: block;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+}
+.sections .collapse-content li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.sections .collapse-content p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.sections .collapse h2 {
+  margin: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.sections .collapse .arrow-icon {
+  width: 20px;
+  transition: transform 0.2s ease;
+}
+.sections .collapse .open {
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 816px) {
+  .fiche-logement__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .fiche-logement__info-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .fiche-logement .sections {
+    flex-direction: column;
+    align-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  .fiche-logement .sections .collapse {
+    width: 100%;
+  }
+}
+@media (max-width: 490px) {
+  .layout-main {
+    padding: 0 15px;
+  }
+  .slideshow {
+    height: 255px;
+  }
+  .fiche-logement .slideshow__image {
+    border-radius: 10px;
+  }
+  .fiche-logement .slideshow__arrow img {
+    width: 11px;
+    height: 19px;
+  }
+  .fiche-logement .slideshow__counter {
+    display: none;
+  }
+  .fiche-logement h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .fiche-logement__location {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .fiche-logement__tag {
+    height: 18px;
+    border-radius: 5px;
+    padding-top: 1px;
+  }
+  .fiche-logement__tag p {
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .fiche-logement__info-right {
+    margin: 15px 0;
+    align-items: center;
+  }
+  .fiche-logement__star.active {
+    width: 18px;
+    height: 18px;
+  }
+  .fiche-logement__star.inactive {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+  }
+  .fiche-logement__host {
+    align-items: center;
+  }
+  .fiche-logement__host p {
+    font-size: 12px;
+  }
+  .fiche-logement__host-picture {
+    width: 32px;
+    height: 32px;
+  }
+  .sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sections .collapse {
+    width: 100%;
+    min-width: 335px;
+  }
+  .sections .collapse-header {
+    height: 30px;
+    padding: 10px;
+  }
+  .sections .collapse-header h2 {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .sections .collapse-header .arrow-icon {
+    width: 16px;
+  }
+  .sections .collapse-content p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .sections .collapse-content li {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  footer {
+    margin-top: 5px;
+  }
+}/*# sourceMappingURL=FicheLogements.css.map */

@@ -1,0 +1,84 @@
+.card-box {
+  width: 100%;
+  max-width: 1240px;
+  height: 829px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 340px));
+  gap: 50px;
+  justify-items: center;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+@media (max-width: 1236px) {
+  .card-box {
+    gap: 70px;
+  }
+}
+@media (max-width: 884px) {
+  .card-box {
+    padding: 20px 0;
+    gap: 20px;
+  }
+}
+@media (max-width: 756px) {
+  .card-box {
+    border-radius: 0;
+    background-color: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+}
+.card-box .card {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.card-box .card img {
+  height: 340px;
+}
+.card-box .card h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  top: 268px;
+  left: 20px;
+}
+
+@media (max-width: 490px) {
+  .layout-main {
+    padding: 0;
+  }
+  .banner {
+    border-radius: 10px;
+  }
+  .card-box {
+    min-width: 335px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .card-box .card-link img {
+    border-radius: 30px;
+  }
+  .card-box .card {
+    height: 255px;
+    border-radius: 20px;
+  }
+  .card-box .card h2 {
+    top: 200px;
+    left: 30px;
+  }
+}/*# sourceMappingURL=Card.css.map */

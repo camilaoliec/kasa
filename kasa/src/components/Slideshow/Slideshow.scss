@@ -1,0 +1,43 @@
+.fiche-logement {
+    max-width: 1240px;
+    width: 100%;
+    .slideshow {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__image {
+            height: 415px;
+            border-radius: 25px;
+            object-fit: cover;
+            width: 100%;
+        }
+        &__counter {
+            position: absolute;
+            top: 357px;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+        &__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 10;
+
+            &--left {
+                left: 10px;
+            }
+            &--right {
+                right: 10px;
+            }
+        }
+    }
+}

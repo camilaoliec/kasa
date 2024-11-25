@@ -1,0 +1,42 @@
+.fiche-logement {
+  max-width: 1240px;
+  width: 100%;
+}
+.fiche-logement .slideshow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fiche-logement .slideshow__image {
+  height: 415px;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.fiche-logement .slideshow__counter {
+  position: absolute;
+  top: 357px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.fiche-logement .slideshow__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+.fiche-logement .slideshow__arrow--left {
+  left: 10px;
+}
+.fiche-logement .slideshow__arrow--right {
+  right: 10px;
+}/*# sourceMappingURL=Slideshow.css.map */

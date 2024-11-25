@@ -1,9 +1,10 @@
 @import 'variables';
 @import 'mixins';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');@import 'footer';
+@import '../components/Footer/footer.scss';
 @import '../components/Banner/Banner.scss';
 @import '../components/Header/Header.scss';
 @import '../pages/Home/Home.scss';
 @import '../scss/global.scss';
 @import '../components/Error/Error.scss';
 @import '../pages/FicheLogements/FicheLogements.scss';
+

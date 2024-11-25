@@ -1,7 +1,8 @@
 @import '../../scss/variables';
 
 .card-box {
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     height: 829px;
     display: grid;
     justify-content: center;
@@ -11,19 +12,36 @@
     background-color: #F6F6F6;
     border-radius: 25px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px;
     overflow-y: auto;
     scrollbar-width: none;
+    @media (max-width: 1236px) {
+        gap: 70px;
+    }
+    @media (max-width: 884px) {
+        padding: 20px 0;
+        gap: 20px;
+    }
+    @media (max-width: 756px) {
+        border-radius: 0;
+        background-color: white;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
     .card {
         width: 340px;
         height: 340px;
         position: relative;
         overflow: hidden;
         object-fit: cover;
+        border-radius: 10px;
+
         img {        
             height: 340px;
         }
-        border-radius: 10px;
         h2 {
             color: white;
             font-family: $font-primary;
@@ -34,4 +52,29 @@
             left: 20px;
         }
     }
+}
+@media (max-width: 490px) {
+    .layout-main {
+        padding: 0;
+    }
+    .banner {
+        border-radius: 10px;
+    }
+    .card-box {
+        min-width: 335px;
+        margin: 0;
+        border-radius: 10px;
+        .card-link img {
+            border-radius: 30px;
+            }
+        .card {
+            height: 255px;
+            border-radius: 20px;
+            h2 {
+                top: 200px;
+                left: 30px;
+            }
+           
+        }
+    }   
 }

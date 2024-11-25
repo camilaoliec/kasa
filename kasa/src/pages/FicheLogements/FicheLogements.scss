@@ -1,50 +1,5 @@
 @import '../../scss/variables';*
 
-main {
-    display: flex;
-    justify-content: center;
-    width: auto;
-}
-
-.slideshow {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    &__image {
-        width: 1240px;
-        height: 415px;
-        border-radius: 25px;
-        object-fit: cover;
-    }
-    &__counter {
-        position: absolute;
-        top: 357px;
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-
-    }
-    &__arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        border: none;
-        color: white;
-        background-color: transparent;
-        cursor: pointer;
-        z-index: 10;
-
-        &--left {
-            left: 10px;
-        }
-        &--right {
-            right: 10px;
-        }
-    }
-}
 h1 {
    font-family: $font-primary;
    font-size: 36px;
@@ -58,6 +13,8 @@ p {
 }
 
 .fiche-logement {
+    display: flex;
+    flex-direction: column;
     &__info {
         display: flex;
         flex-direction: row;
@@ -81,13 +38,14 @@ p {
         background-color: #FF6060;
         width: auto;
         border-radius: 10px;
-        padding: 0 15px;
         font-weight: 700;
+        padding: 0 15px;
         p {
             color: white;
             font-family: $font-primary;
             font-size: 14px;
             margin: 0;
+            height: 25px;
         }
     }
     &__host {
@@ -116,59 +74,180 @@ p {
         width: 25px;
         height: 26px;
     }
-    .sections {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 76px;
-        .collapse {
-            width: 582px;
-            height: 52px;
-            &-header {
-                display: flex;
-                align-items: center;
-                display: flex;
-                justify-content: space-between;
-                padding: 10px 20px 10px 15px;
-                background-color: #FF6060;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-            &-content {
-                overflow: hidden;
-                padding: 15px;
-                display: none;
-                display: block;
-                background-color: #F6F6F673;
-                li {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                    font-family: $font-primary;
-                    font-weight: 400;
-                    font-size: 18px;
-                }
-                p {
-                    margin: 0;
-                    font-family: $font-primary;
-                    font-weight: 400;
-                    font-size: 18px;
-                }
-            }
-            h2 {
+}
+.sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: nowrap;
+    .collapse {
+        width: 47%;
+        max-width: 582px;
+        margin-bottom: 20px;
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px 10px 15px;
+            background-color: #FF6060;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        &-content {
+            overflow: hidden;
+            padding: 15px;
+            display: none;
+            display: block;
+            background-color: #F6F6F673;
+            li {
+                list-style: none;
+                padding: 0;
                 margin: 0;
-                color: white;
                 font-family: $font-primary;
-                font-weight: 700;
+                font-weight: 400;
                 font-size: 18px;
             }
-            .arrow-icon {
-                width: 20px;
-                transition: transform 0.2s ease;
-            }
-            .open {
-                transform: rotate(-180deg);
+            p {
+                margin: 0;
+                font-family: $font-primary;
+                font-weight: 400;
+                font-size: 18px;
             }
         }
-    } 
+        h2 {
+            margin: 0;
+            color: white;
+            font-family: $font-primary;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .arrow-icon {
+            width: 20px;
+            transition: transform 0.2s ease;
+        }
+        .open {
+            transform: rotate(-180deg);
+        }
+    }
+} 
+@media (max-width: 816px) {
+    .fiche-logement {
+  
+        &__info {
+                display: flex;
+                flex-direction: column;
+                &-right {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                }
+            }
+        .sections {
+            flex-direction: column;
+            align-content: center;
+            gap: 20px;
+            align-items: center;
+            .collapse {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .layout-main {
+        padding: 0 15px;
+    }
+    .slideshow {
+        height: 255px;
+    }
+    .fiche-logement {
+        .slideshow {
+            &__image {
+                border-radius: 10px;
+            }
+            &__arrow img {
+                width: 11px;
+                height: 19px;
+            }
+            &__counter {
+                display: none;
+            }
+        }
+        h1 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &__location {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        } 
+        &__tag {
+            height: 18px;
+            border-radius: 5px;
+            padding-top: 1px;
+            p {
+                font-size: 10px;
+                font-weight: 700;
+            }
+        } 
+        &__info-right {
+            margin: 15px 0;
+            align-items: center;
+        }
+        &__star.active {
+            width: 18px;
+            height: 18px;
+        }
+        &__star.inactive {
+            width: 13px;
+            height: 13px;
+            margin: 0;
+        }
+        &__host {
+            align-items: center;
+            p {
+                font-size: 12px;
+            }
+            &-picture {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    .sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .collapse {
+            width: 100%;
+            min-width: 335px;
+            &-header {
+                height: 30px;
+                padding: 10px;
+                h2 {
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+                .arrow-icon {
+                    width: 16px;
+                }
+            }
+            &-content {
+                p {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+                li {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    footer {
+        margin-top: 5px;
+    }
 }

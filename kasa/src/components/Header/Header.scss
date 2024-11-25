@@ -6,7 +6,9 @@ nav {
     justify-content: space-between;
     height: 68px;
     max-width: 1240px;
-    margin: 40px auto;
+    margin: 40px 0 50px;
+    padding: 0 20px;
+    width: 93%;
     img {
         width: 210px;
         height: 68px;
@@ -23,6 +25,27 @@ nav {
         }
         .active {
             text-decoration: underline;
+        }
+    }
+}
+@media (max-width: 480px) {
+    nav {
+        width: 335px;
+        margin: 20px 0 30px;
+        padding: 0;
+
+        img {
+        width: 145px;
+        height: 46px;
+        }
+        .nav-links {
+            gap: 20px;
+            a {
+            font-size: 12px;
+            font-weight: 500;
+                font-family: $font-primary;
+            text-transform: uppercase;
+            }
         }
     }
 }
