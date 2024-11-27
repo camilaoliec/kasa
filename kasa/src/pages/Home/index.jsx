@@ -5,10 +5,10 @@ import Gallery from '../../components/Gallery'
 
 function Home() {
   return (
-    <>
-        <Banner backgroundImage={backgroundImage}title="Chez vous, partout et ailleurs" />
-        <Gallery />
-    </>
+    <div className='home-conontainer'>
+      <Banner backgroundImage={backgroundImage}title="Chez vous, partout et ailleurs" />
+      <Gallery />
+    </div>
   )
 }
 export default Home

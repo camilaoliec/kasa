@@ -32,6 +32,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
+    height: auto;
+    @media (max-width: 490px) {
+       height: 100%; 
+    }
+    
 }
 body {
     font-family: $font-primary;
@@ -59,8 +64,10 @@ a {
     text-decoration: none;
 }
 
-// @media (max-width: 480px) {
-//     .layout-main {
-//         width: 100%;
-//     }
-// }
+
+
+@media (max-width: 490px) {
+    .a-propos-container {
+        height: auto;    
+    }
+}

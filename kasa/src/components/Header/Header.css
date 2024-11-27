@@ -27,10 +27,10 @@ nav .nav-links .active {
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   nav {
     width: 335px;
-    margin: 20px 0 30px;
+    margin: 20px 0 20px;
     padding: 0;
   }
   nav img {

@@ -7,7 +7,7 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(150px, 340px));
-    gap: 50px;
+    gap: 20px;
     justify-items: center;
     background-color: #F6F6F6;
     border-radius: 25px;
@@ -18,7 +18,7 @@
     @media (max-width: 1236px) {
         gap: 70px;
     }
-    @media (max-width: 884px) {
+    @media (max-width: 907px) {
         padding: 20px 0;
         gap: 20px;
     }
@@ -54,27 +54,31 @@
     }
 }
 @media (max-width: 490px) {
-    .layout-main {
-        padding: 0;
-    }
-    .banner {
-        border-radius: 10px;
-    }
-    .card-box {
-        min-width: 335px;
-        margin: 0;
-        border-radius: 10px;
-        .card-link img {
-            border-radius: 30px;
-            }
-        .card {
-            height: 255px;
-            border-radius: 20px;
-            h2 {
-                top: 200px;
-                left: 30px;
-            }
-           
+    .home-conontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+        .banner {
+            border-radius: 10px;
         }
+        .card-box {
+            min-width: 335px;
+            margin: 0;
+            border-radius: 10px;
+        
+            .card-link img {
+                border-radius: 30px;
+                }
+            .card {
+                height: 255px;
+                border-radius: 20px;
+                h2 {
+                    top: 200px;
+                    left: 30px;
+                }
+            
+            }
+        }  
     }   
 }

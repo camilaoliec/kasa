@@ -1,3 +1,73 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.layout-main {
+  display: flex;
+  max-width: 1240px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  height: auto;
+}
+@media (max-width: 490px) {
+  .layout-main {
+    height: 100%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 490px) {
+  .a-propos-container {
+    height: auto;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -21,9 +91,11 @@ footer h3 {
   margin: 30px 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   footer {
+    padding-bottom: 10px;
     width: 100%;
+    margin-top: 30px;
   }
   footer h3 {
     font-size: 12px;
@@ -55,7 +127,7 @@ footer h3 {
     width: 335px;
     height: 111px;
     border-radius: 10px;
-    margin: 0 0 30px 0;
+    margin: 0;
   }
   .banner h1 {
     margin-left: 20px;
@@ -94,10 +166,10 @@ nav .nav-links .active {
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   nav {
     width: 335px;
-    margin: 20px 0 30px;
+    margin: 20px 0 20px;
     padding: 0;
   }
   nav img {
@@ -114,70 +186,157 @@ nav .nav-links .active {
     text-transform: uppercase;
   }
 }
-.link-Home {
-  text-decoration: underline;
-  width: 2000px;
+.card-box {
+  width: 100%;
+  max-width: 1240px;
+  height: 829px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 340px));
+  gap: 20px;
+  justify-items: center;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+@media (max-width: 1236px) {
+  .card-box {
+    gap: 70px;
+  }
+}
+@media (max-width: 907px) {
+  .card-box {
+    padding: 20px 0;
+    gap: 20px;
+  }
+}
+@media (max-width: 756px) {
+  .card-box {
+    border-radius: 0;
+    background-color: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+}
+.card-box .card {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card-box .card img {
+  height: 340px;
+}
+.card-box .card h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  top: 268px;
+  left: 20px;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+@media (max-width: 490px) {
+  .home-conontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+  }
+  .home-conontainer .banner {
+    border-radius: 10px;
+  }
+  .home-conontainer .card-box {
+    min-width: 335px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .home-conontainer .card-box .card-link img {
+    border-radius: 30px;
+  }
+  .home-conontainer .card-box .card {
+    height: 255px;
+    border-radius: 20px;
+  }
+  .home-conontainer .card-box .card h2 {
+    top: 200px;
+    left: 30px;
+  }
+}
+.a-propos-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collapses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+.collapses-container .collapse {
+  max-width: 1023px;
+  width: 80%;
   box-sizing: border-box;
 }
-
-#root {
+.collapses-container .collapse-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px 10px 15px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
-
-html,
-body {
-  height: 100%;
-}
-
-.layout-main {
-  display: flex;
-  max-width: 1240px;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
-}
-
-body {
+.collapses-container .collapse-header h2 {
+  margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: white;
-  color: #333;
-  line-height: 1.6;
-  display: flex;
-  justify-content: center;
 }
-
-.container {
-  width: 100%;
-  margin: 0 auto;
+.collapses-container .collapse .arrow-icon {
+  width: 20px;
+  transition: transform 0.2s ease;
+}
+.collapses-container .collapse .open {
+  transform: rotate(-180deg);
+}
+.collapses-container .collapse-content {
   padding: 15px;
+  display: none;
+  display: block;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+}
+.collapses-container .collapse-content p {
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 10px;
+@media (max-width: 490px) {
+  .collapses-container {
+    margin-top: 20px;
+    gap: 20px;
+    width: 335px;
+  }
+  .collapses-container .collapse h2 {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .collapses-container .collapse-content p {
+    font-weight: 400;
+    font-size: 12px;
+  }
 }
-
-p {
-  margin-bottom: 1em;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-}
-
 .error-container {
   display: flex;
   flex-direction: column;
@@ -187,7 +346,7 @@ a {
 .error-container img {
   width: 597px;
   height: 236px;
-  margin-top: 140px;
+  margin-top: 90px;
 }
 .error-container h1 {
   font-size: 36px;
@@ -204,7 +363,80 @@ a {
   color: black;
 }
 
-* h1 {
+@media (max-width: 490px) {
+  .error-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+  .error-container img {
+    width: 230px;
+    height: 80px;
+  }
+  .error-container h1 {
+    display: flex;
+    width: 260px;
+    height: 52px;
+    font-size: 18px;
+    margin: 0;
+  }
+  .error-container a {
+    margin-bottom: 100px;
+    font-size: 14px;
+  }
+}
+.fiche-logement {
+  max-width: 1240px;
+  width: 100%;
+}
+.fiche-logement .slideshow {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.fiche-logement .slideshow__image {
+  border-radius: 25px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+}
+.fiche-logement .slideshow__counter {
+  position: absolute;
+  top: 357px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.fiche-logement .slideshow__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+.fiche-logement .slideshow__arrow--left {
+  left: 10px;
+}
+.fiche-logement .slideshow__arrow--right {
+  right: 10px;
+}
+
+.link-Home {
+  text-decoration: underline;
+  width: 2000px;
+}
+
+h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 500;
@@ -238,6 +470,7 @@ p {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .fiche-logement__tag {
   align-items: center;
@@ -359,11 +592,8 @@ p {
   }
 }
 @media (max-width: 490px) {
-  .layout-main {
-    padding: 0 15px;
-  }
-  .slideshow {
-    height: 255px;
+  .fiche-logement .slideshow {
+    height: auto;
   }
   .fiche-logement .slideshow__image {
     border-radius: 10px;
@@ -393,6 +623,9 @@ p {
     font-size: 10px;
     font-weight: 700;
   }
+  .fiche-logement__info {
+    margin-top: 0;
+  }
   .fiche-logement__info-right {
     margin: 15px 0;
     align-items: center;
@@ -420,10 +653,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
   .sections .collapse {
     width: 100%;
     min-width: 335px;
+    margin: 0;
   }
   .sections .collapse-header {
     height: 30px;
@@ -443,9 +678,6 @@ p {
   .sections .collapse-content li {
     font-size: 12px;
     font-weight: 400;
-  }
-  footer {
-    margin-top: 5px;
   }
 }
 

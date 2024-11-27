@@ -1,10 +1,23 @@
+
+// importations globales
+
 @import 'variables';
 @import 'mixins';
+@import 'global';
+
+// Components
+
 @import '../components/Footer/footer.scss';
 @import '../components/Banner/Banner.scss';
 @import '../components/Header/Header.scss';
-@import '../pages/Home/Home.scss';
-@import '../scss/global.scss';
+@import '../components/Card/Card.scss';
+@import'../components/Collapse/Collapse.scss';
 @import '../components/Error/Error.scss';
+@import '../components/Slideshow/Slideshow.scss';
+
+// Pages
+
+@import '../pages/Home/Home.scss';
+@import '../pages/APropos/APropos.scss';
 @import '../pages/FicheLogements/FicheLogements.scss';
 

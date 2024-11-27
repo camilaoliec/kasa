@@ -1,4 +1,4 @@
-@import '../../scss/variables';*
+@import '../../scss/variables';
 
 h1 {
    font-family: $font-primary;
@@ -32,6 +32,7 @@ p {
         display: flex;
         flex-direction: row;
         gap: 15px;
+        flex-wrap: wrap;
     }
     &__tag {
         align-items: center;
@@ -156,14 +157,9 @@ p {
 }
 
 @media (max-width: 490px) {
-    .layout-main {
-        padding: 0 15px;
-    }
-    .slideshow {
-        height: 255px;
-    }
     .fiche-logement {
         .slideshow {
+            height: auto;
             &__image {
                 border-radius: 10px;
             }
@@ -193,9 +189,12 @@ p {
                 font-weight: 700;
             }
         } 
-        &__info-right {
-            margin: 15px 0;
-            align-items: center;
+        &__info {
+            margin-top: 0;
+            &-right {
+                margin: 15px 0;
+                align-items: center;
+            }
         }
         &__star.active {
             width: 18px;
@@ -221,9 +220,11 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
         .collapse {
             width: 100%;
             min-width: 335px;
+            margin: 0;
             &-header {
                 height: 30px;
                 padding: 10px;
@@ -246,8 +247,5 @@ p {
                 }
             }
         }
-    }
-    footer {
-        margin-top: 5px;
     }
 }
