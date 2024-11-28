@@ -25,26 +25,32 @@ nav {
         }
         .active {
             text-decoration: underline;
+            text-underline-offset: 1px; 
         }
     }
 }
-@media (max-width: 490px) {
+@media (max-width: 600px) {
     nav {
-        width: 335px;
         margin: 20px 0 20px;
         padding: 0;
-
+        min-width: 335px;
+        width: auto;
         img {
         width: 145px;
         height: 46px;
         }
         .nav-links {
             gap: 20px;
+            align-items: center;
+            gap: auto;
             a {
             font-size: 12px;
             font-weight: 500;
                 font-family: $font-primary;
             text-transform: uppercase;
+            }
+            .active {
+                text-underline-offset: 2px; 
             }
         }
     }

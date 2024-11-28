@@ -25,13 +25,15 @@ nav .nav-links a {
 }
 nav .nav-links .active {
   text-decoration: underline;
+  text-underline-offset: 1px;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 600px) {
   nav {
-    width: 335px;
     margin: 20px 0 20px;
     padding: 0;
+    min-width: 335px;
+    width: auto;
   }
   nav img {
     width: 145px;
@@ -39,11 +41,16 @@ nav .nav-links .active {
   }
   nav .nav-links {
     gap: 20px;
+    align-items: center;
+    gap: auto;
   }
   nav .nav-links a {
     font-size: 12px;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
+  }
+  nav .nav-links .active {
+    text-underline-offset: 2px;
   }
 }/*# sourceMappingURL=Header.css.map */

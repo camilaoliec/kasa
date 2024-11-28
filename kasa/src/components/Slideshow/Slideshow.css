@@ -41,4 +41,13 @@
 }
 .fiche-logement .slideshow__arrow--right {
   right: 10px;
+}
+
+@media (max-width: 490px) {
+  .fiche-logement .slideshow {
+    height: 225px;
+  }
+  .fiche-logement .slideshow__image {
+    height: 100%;
+  }
 }/*# sourceMappingURL=Slideshow.css.map */

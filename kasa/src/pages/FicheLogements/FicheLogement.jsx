@@ -5,7 +5,7 @@ import Slideshow from '../../components/Slideshow/'
 import starAcitve from '../../assets/StarActive-FicheLogement.png'
 import starInactive from '../../assets/StarInactive-FicheLogement.png'
 import Collapse from '../../components/Collapse'
-import '../FicheLogements/FicheLogements.scss'
+
 function FicheLogement() {
   const [data, setData] = useState([])
   const { id } = useParams()
@@ -74,16 +74,16 @@ function FicheLogement() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="sections">
-        <Collapse title="Description">
-          <p>{appartement.description}</p>
-        </Collapse>
-        <Collapse title="Équipements">
-          {appartement.equipments.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </Collapse>
+        <div className="sections">
+          <Collapse title="Description">
+            <p>{appartement.description}</p>
+          </Collapse>
+          <Collapse title="Équipements">
+            {appartement.equipments.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </Collapse>
+        </div>
       </div>
     </>
   )

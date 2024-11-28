@@ -27,11 +27,6 @@ body {
   padding: 0 20px;
   height: auto;
 }
-@media (max-width: 490px) {
-  .layout-main {
-    height: 100%;
-  }
-}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -119,22 +114,30 @@ footer h3 {
   color: white;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 690px) {
+  .banner h1 {
+    width: 335px;
+    padding: 20px;
+  }
+}
 
 @media (max-width: 490px) {
   .banner {
     display: flex;
     justify-content: flex-start;
-    width: 335px;
     height: 111px;
     border-radius: 10px;
-    margin: 0;
+    margin: 0 0 30px;
   }
   .banner h1 {
     margin-left: 20px;
     font-size: 24px;
     font-weight: 700;
     width: 220px;
-    height: 48px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    padding: 0;
   }
 }
 nav {
@@ -164,13 +167,15 @@ nav .nav-links a {
 }
 nav .nav-links .active {
   text-decoration: underline;
+  text-underline-offset: 1px;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 600px) {
   nav {
-    width: 335px;
     margin: 20px 0 20px;
     padding: 0;
+    min-width: 335px;
+    width: auto;
   }
   nav img {
     width: 145px;
@@ -178,12 +183,17 @@ nav .nav-links .active {
   }
   nav .nav-links {
     gap: 20px;
+    align-items: center;
+    gap: auto;
   }
   nav .nav-links a {
     font-size: 12px;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
+  }
+  nav .nav-links .active {
+    text-underline-offset: 2px;
   }
 }
 .card-box {
@@ -256,18 +266,19 @@ nav .nav-links .active {
     border-radius: 10px;
   }
   .home-conontainer .card-box {
-    min-width: 335px;
     margin: 0;
     border-radius: 10px;
+    height: 100%;
   }
   .home-conontainer .card-box .card-link img {
     border-radius: 30px;
   }
-  .home-conontainer .card-box .card {
-    height: 255px;
+  .home-conontainer .card-box .card-link img .card {
     border-radius: 20px;
+    width: 335px;
+    height: 255px;
   }
-  .home-conontainer .card-box .card h2 {
+  .home-conontainer .card-box .card-link img .card h2 {
     top: 200px;
     left: 30px;
   }
@@ -324,9 +335,10 @@ nav .nav-links .active {
 
 @media (max-width: 490px) {
   .collapses-container {
-    margin-top: 20px;
     gap: 20px;
-    width: 335px;
+  }
+  .collapses-container .collapse {
+    width: 100%;
   }
   .collapses-container .collapse h2 {
     font-size: 13px;
@@ -431,6 +443,14 @@ nav .nav-links .active {
   right: 10px;
 }
 
+@media (max-width: 490px) {
+  .fiche-logement .slideshow {
+    height: 225px;
+  }
+  .fiche-logement .slideshow__image {
+    height: 100%;
+  }
+}
 .link-Home {
   text-decoration: underline;
   width: 2000px;

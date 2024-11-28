@@ -63,21 +63,21 @@
             border-radius: 10px;
         }
         .card-box {
-            min-width: 335px;
             margin: 0;
             border-radius: 10px;
-        
+            height: 100%;
             .card-link img {
                 border-radius: 30px;
+                .card {
+                    border-radius: 20px;
+                    width: 335px;
+                    height: 255px;
+                    h2 {
+                        top: 200px;
+                        left: 30px;
+                    }
+                    
                 }
-            .card {
-                height: 255px;
-                border-radius: 20px;
-                h2 {
-                    top: 200px;
-                    left: 30px;
-                }
-            
             }
         }  
     }   

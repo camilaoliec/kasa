@@ -43,3 +43,13 @@
         }
     }
 }
+@media (max-width: 490px) {
+    .fiche-logement {
+        .slideshow {
+            height: 225px;
+            &__image {
+                height: 100%;
+            }
+        }
+    }
+}

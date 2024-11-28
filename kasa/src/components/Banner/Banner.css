@@ -15,21 +15,29 @@
   color: white;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 690px) {
+  .banner h1 {
+    width: 335px;
+    padding: 20px;
+  }
+}
 
 @media (max-width: 490px) {
   .banner {
     display: flex;
     justify-content: flex-start;
-    width: 335px;
     height: 111px;
     border-radius: 10px;
-    margin: 0;
+    margin: 0 0 30px;
   }
   .banner h1 {
     margin-left: 20px;
     font-size: 24px;
     font-weight: 700;
     width: 220px;
-    height: 48px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    padding: 0;
   }
 }/*# sourceMappingURL=Banner.css.map */

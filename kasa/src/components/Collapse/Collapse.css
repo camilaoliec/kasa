@@ -50,9 +50,10 @@
 
 @media (max-width: 490px) {
   .collapses-container {
-    margin-top: 20px;
     gap: 20px;
-    width: 335px;
+  }
+  .collapses-container .collapse {
+    width: 100%;
   }
   .collapses-container .collapse h2 {
     font-size: 13px;
