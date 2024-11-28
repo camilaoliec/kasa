@@ -44,7 +44,8 @@
     margin: 0;
   }
   .error-container a {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     font-size: 14px;
+    font-weight: 500;
   }
 }/*# sourceMappingURL=Error.css.map */

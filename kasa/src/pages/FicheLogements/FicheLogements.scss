@@ -52,6 +52,7 @@ p {
     &__host {
         display: flex;
         flex-direction: row;
+        align-items: center;
         p {
             font-family: $font-primary;
             font-size: 18px;
