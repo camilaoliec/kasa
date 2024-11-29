@@ -33,8 +33,6 @@ body {
   background-color: white;
   color: #333;
   line-height: 1.6;
-  display: flex;
-  justify-content: center;
 }
 
 .container {

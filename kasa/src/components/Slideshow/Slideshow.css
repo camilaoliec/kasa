@@ -1,8 +1,4 @@
-.fiche-logement {
-  max-width: 1240px;
-  width: 100%;
-}
-.fiche-logement .slideshow {
+.slideshow {
   position: relative;
   width: 100%;
   height: 415px;
@@ -12,21 +8,21 @@
   justify-content: center;
   margin-bottom: 20px;
 }
-.fiche-logement .slideshow__image {
+.slideshow__image {
   border-radius: 25px;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
   width: 100%;
 }
-.fiche-logement .slideshow__counter {
+.slideshow__counter {
   position: absolute;
   top: 357px;
   color: white;
   font-size: 18px;
   font-weight: 500;
 }
-.fiche-logement .slideshow__arrow {
+.slideshow__arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -36,10 +32,10 @@
   cursor: pointer;
   z-index: 10;
 }
-.fiche-logement .slideshow__arrow--left {
+.slideshow__arrow--left {
   left: 10px;
 }
-.fiche-logement .slideshow__arrow--right {
+.slideshow__arrow--right {
   right: 10px;
 }
 

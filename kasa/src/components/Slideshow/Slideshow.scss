@@ -1,55 +1,51 @@
-.fiche-logement {
-    max-width: 1240px;
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  &__image {
+    border-radius: 25px;
+    object-fit: cover;
+    overflow: hidden;
     width: 100%;
-    .slideshow {
-        position: relative;
-        width: 100%;
-        height: 415px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        &__image {
-            border-radius: 25px;
-            object-fit: cover;
-            overflow: hidden;
-            width: 100%;
-        }
-        &__counter {
-            position: absolute;
-            top: 357px;
-            color: white;
-            font-size: 18px;
-            font-weight: 500;
+  }
+  &__counter {
+    position: absolute;
+    top: 357px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
 
-        }
-        &__arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            border: none;
-            color: white;
-            background-color: transparent;
-            cursor: pointer;
-            z-index: 10;
-
-            &--left {
-                left: 10px;
-            }
-            &--right {
-                right: 10px;
-            }
-        }
+    &--left {
+      left: 10px;
     }
+    &--right {
+      right: 10px;
+    }
+  }
 }
+
 @media (max-width: 490px) {
-    .fiche-logement {
-        .slideshow {
-            height: 225px;
-            &__image {
-                height: 100%;
-            }
-        }
+  .fiche-logement {
+    .slideshow {
+      height: 225px;
+      &__image {
+        height: 100%;
+      }
     }
+  }
 }

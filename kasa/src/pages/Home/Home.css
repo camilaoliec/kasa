@@ -1,4 +1,6 @@
-.link-Home {
-  text-decoration: underline;
-  width: 2000px;
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }/*# sourceMappingURL=Home.css.map */
