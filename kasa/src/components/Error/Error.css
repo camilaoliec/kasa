@@ -5,8 +5,9 @@
   gap: 139px;
 }
 .error-container img {
-  width: 597px;
-  height: 236px;
+  width: 60%;
+  max-width: 597px;
+  height: auto;
   margin-top: 90px;
 }
 .error-container h1 {
@@ -15,6 +16,9 @@
   color: #FF6060;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
 }
 .error-container a {
   text-decoration: underline;
@@ -22,6 +26,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: black;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 490px) {

@@ -10,14 +10,16 @@ function App() {
   return (
     <Router>
       <div className="container-App">
-      <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/property/:id" element={<FicheLogement />} />
-          <Route path="/APropos" element={<APropos />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      <Footer />
+        <Header />
+        <div className="layout-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/property/:id" element={<FicheLogement />} />
+            <Route path="/APropos" element={<APropos />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </Router>
   )

@@ -54,31 +54,26 @@
     }
 }
 @media (max-width: 490px) {
-    .home-conontainer {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        height: 100%;
-        .banner {
-            border-radius: 10px;
-        }
-        .card-box {
-            margin: 0;
-            border-radius: 10px;
-            height: 100%;
+    .banner {
+        border-radius: 10px;
+    }
+    .card-box {
+        margin: 20px 0 0 0;
+        border-radius: 10px;
+        height: 100%; 
+        margin-bottom: 10px;   
+        .card {
             .card-link img {
                 border-radius: 30px;
-                .card {
-                    border-radius: 20px;
-                    width: 335px;
-                    height: 255px;
-                    h2 {
-                        top: 200px;
-                        left: 30px;
-                    }
-                    
-                }
+                border-radius: 20px;
+                width: 335px;
+                height: 255px;
             }
-        }  
-    }   
+            h2 {
+                top: 290px;
+                left: 20px;
+                width: 90%;
+            }
+        }
+    }    
 }

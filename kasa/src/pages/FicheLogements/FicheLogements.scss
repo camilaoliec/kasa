@@ -13,6 +13,7 @@ p {
 }
 
 .fiche-logement {
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     &__info {
@@ -133,9 +134,15 @@ p {
         }
     }
 } 
+@media (max-width: 1049px) {
+    .fiche-logement__tags {
+        margin-bottom: 30px;
+    }
+}
+
 @media (max-width: 816px) {
     .fiche-logement {
-  
+
         &__info {
                 display: flex;
                 flex-direction: column;
@@ -143,6 +150,7 @@ p {
                     display: flex;
                     flex-direction: row-reverse;
                     justify-content: space-between;
+                    margin-bottom: 20px;
                 }
             }
         .sections {
@@ -193,7 +201,7 @@ p {
         &__info {
             margin-top: 0;
             &-right {
-                margin: 15px 0;
+                margin: 0 0 15px 0;
                 align-items: center;
             }
         }
@@ -222,13 +230,13 @@ p {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        .collapse {
-            width: 100%;
+        margin-bottom: 10px;
+        .collapse {  
             min-width: 335px;
             margin: 0;
+            padding: 0;
             &-header {
                 height: 30px;
-                padding: 10px;
                 h2 {
                     font-size: 13px;
                     font-weight: 700;
@@ -238,9 +246,17 @@ p {
                 }
             }
             &-content {
+                min-width: 90%;
+                width: 335px;
+                padding: auto;
+                width: 100%;
                 p {
+                    word-wrap: break-word;
+                    box-sizing: border-box;
                     font-size: 12px;
                     font-weight: 400;
+                    margin: 0;
+                    
                 }
                 li {
                     font-size: 12px;
@@ -248,5 +264,11 @@ p {
                 }
             }
         }
+    }
+    .collapse-content p, 
+    .collapse-content li {
+        max-width: 100%;
+        width: auto;
+        overflow-wrap: break-word;
     }
 }

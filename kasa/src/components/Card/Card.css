@@ -59,30 +59,24 @@
 }
 
 @media (max-width: 490px) {
-  .home-conontainer {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    height: 100%;
-  }
-  .home-conontainer .banner {
+  .banner {
     border-radius: 10px;
   }
-  .home-conontainer .card-box {
-    margin: 0;
+  .card-box {
+    margin: 20px 0 0 0;
     border-radius: 10px;
     height: 100%;
+    margin-bottom: 10px;
   }
-  .home-conontainer .card-box .card-link img {
+  .card-box .card .card-link img {
     border-radius: 30px;
-  }
-  .home-conontainer .card-box .card-link img .card {
     border-radius: 20px;
     width: 335px;
     height: 255px;
   }
-  .home-conontainer .card-box .card-link img .card h2 {
-    top: 200px;
-    left: 30px;
+  .card-box .card h2 {
+    top: 290px;
+    left: 20px;
+    width: 90%;
   }
 }/*# sourceMappingURL=Card.css.map */
