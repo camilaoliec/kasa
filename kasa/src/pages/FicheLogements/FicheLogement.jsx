@@ -26,7 +26,6 @@ function FicheLogement() {
   }, [])
 
   const appartement = data.find((apt) => apt.id === id)
-  console.log('appartement', appartement)
 
   if (!appartement) {
     return <p>Loading...</p>
